@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz d'Orientation - AfterBac Maroc</title>
+    <meta name="description" content="Quiz gratuit pour découvrir les filières post-bac qui correspondent à ton profil. Résultats personnalisés.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">🎓 AfterBac<span class="logo-highlight">Maroc</span></a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="guide.html">Guide des Options</a></li>
+                <li><a href="quiz.html" class="active">Quiz d'Orientation</a></li>
+                <li><a href="articles.html">Articles</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <div class="container">
+            <h1>🎯 Quiz d'Orientation</h1>
+            <p class="subtitle">Réponds à quelques questions et découvre les filières qui te correspondent le mieux.</p>
+
+            <div class="quiz-container" id="quiz">
+                <!-- Question 1 -->
+                <div class="quiz-step active" data-step="1">
+                    <h3>Question 1/5 : Quel type de baccalauréat as-tu ?</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-value="sciences">Sciences Maths / Sciences Physiques</button>
+                        <button class="quiz-option" data-value="svt">SVT / Sciences de la Vie</button>
+                        <button class="quiz-option" data-value="eco">Économie / Gestion</button>
+                        <button class="quiz-option" data-value="lettres">Lettres / Sciences Humaines</button>
+                        <button class="quiz-option" data-value="autre">Autre / Professionnel</button>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="quiz-step" data-step="2">
+                    <h3>Question 2/5 : Ta moyenne générale au bac est environ de :</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-value="moins10">Moins de 10/20</button>
+                        <button class="quiz-option" data-value="10-12">Entre 10 et 12/20</button>
+                        <button class="quiz-option" data-value="12-14">Entre 12 et 14/20</button>
+                        <button class="quiz-option" data-value="14-16">Entre 14 et 16/20</button>
+                        <button class="quiz-option" data-value="plus16">Plus de 16/20</button>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="quiz-step" data-step="3">
+                    <h3>Question 3/5 : Ce qui compte le plus pour toi :</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-value="emploi">Trouver un emploi rapidement</button>
+                        <button class="quiz-option" data-value="passion">Étudier un domaine qui me passionne</button>
+                        <button class="quiz-option" data-value="prestige">Intégrer une école prestigieuse</button>
+                        <button class="quiz-option" data-value="budget">Ne pas coûter cher à ma famille</button>
+                        <button class="quiz-option" data-value="etranger">Partir étudier à l'étranger</button>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="quiz-step" data-step="4">
+                    <h3>Question 4/5 : Tu te vois plutôt :</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-value="technique">Travailler dans un domaine technique (informatique, mécanique...)</button>
+                        <button class="quiz-option" data-value="commerce">Dans le commerce, marketing, gestion</button>
+                        <button class="quiz-option" data-value="social">Dans un métier social, éducation, droit</button>
+                        <button class="quiz-option" data-value="sante">Dans la santé (médecine, pharmacie...)</button>
+                        <button class="quiz-option" data-value="indecis">Je ne sais pas encore</button>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="quiz-step" data-step="5">
+                    <h3>Question 5/5 : Ton budget pour les études :</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-value="zero">Zéro — je cherche le gratuit</button>
+                        <button class="quiz-option" data-value="faible">Moins de 10 000 MAD/an</button>
+                        <button class="quiz-option" data-value="moyen">10 000 - 40 000 MAD/an</button>
+                        <button class="quiz-option" data-value="eleve">Plus de 40 000 MAD/an</button>
+                        <button class="quiz-option" data-value="aucuneidee">Je ne sais pas</button>
+                    </div>
+                </div>
+
+                <!-- Results -->
+                <div class="quiz-step" data-step="result">
+                    <h3>🎉 Voici nos recommandations pour toi !</h3>
+                    <div class="quiz-result" id="quizResult">
+                        <!-- Filled by JavaScript -->
+                    </div>
+                    <button class="btn btn-primary" id="restartQuiz">🔄 Refaire le quiz</button>
+                </div>
+            </div>
+
+            <div class="quiz-progress">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2026 AfterBacMaroc</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
